@@ -1,0 +1,49 @@
+What?
+--------------------------------------------------
+Mostra duas linhas no display
+
+
+
+Resources
+--------------------------------------------------
+- Arduino UNO
+- Display 16x2 - http://adafruit.com/products/399
+
+
+
+Manual
+--------------------------------------------------
+- Display : http://learn.adafruit.com/character-lcds/wiring-a-character-lcd
+
+
+
+Pins
+--------------------------------------------------
+
+[D]isplay    |    [A]rduino    |    [K]nob
+
+** Data
+A7  -> D4
+A8  -> D6
+A9  -> D11
+A10 -> D12
+A11 -> D13
+A12 -> D14
+
+** Energy
+A5V -> D15
+AGND -> DCO -> 16/17/18 (color)
+DCO -> D5
+
+
+** Knob
+D1 -> K1
+D3 -> K2
+D2 -> K3
+
+
+
+Picture
+--------------------------------------------------
+
+http://sphotos-f.ak.fbcdn.net/hphotos-ak-ash4/385705_10200316976995383_1623782820_n.jpg
