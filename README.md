@@ -61,7 +61,12 @@ Libraries
 From: http://www.arduino.cc/en/Hacking/Libraries
 
 
-	User-created libraries as of version 0017 go in a subdirectory of your default sketch directory. For example, on OSX, the new directory would be ~/Documents/Arduino/libraries/. On Windows, it would be My Documents\Arduino\libraries\. To add your own library, create a new directory in the libraries directory with the name of your library. The folder should contain a C or C++ file with your code and a header file with your function and variable declarations. It will then appear in the Sketch | Import Library menu in the Arduino IDE.
+	User-created libraries as of version 0017 go in a subdirectory of your default sketch directory. 
+	For example, on OSX, the new directory would be ~/Documents/Arduino/libraries/. 
+	On Windows, it would be My Documents\Arduino\libraries\. 
+	To add your own library, create a new directory in the libraries directory with the name of your library. 
+	The folder should contain a C or C++ file with your code and a header file with your function and variable declarations. 
+	It will then appear in the Sketch | Import Library menu in the Arduino IDE.
 
 
 
