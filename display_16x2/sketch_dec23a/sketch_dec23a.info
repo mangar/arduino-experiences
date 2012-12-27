@@ -30,6 +30,17 @@ A10 -> D12
 A11 -> D13
 A12 -> D14
 
+If you are want to use the Ethernet shield you should not use the pin 10>. So, change a little bit the scheme.
+A4 -> D13
+A5 -> D14
+A6 -> D4
+A7 -> D6
+A8 -> D11
+A9 -> D12
+
+
+
+
 ** Energy
 A5V -> D15
 AGND -> DCO -> 16/17/18 (color)
