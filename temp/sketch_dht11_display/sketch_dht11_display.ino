@@ -7,7 +7,9 @@
 #define GREENLITE 5
 #define BLUELITE 6
  
-LiquidCrystal lcd(6, 7, 8,  9,  4,  5);
+//LiquidCrystal lcd(6, 7, 8,  9,  4,  5);
+LiquidCrystal lcd(42, 43, 44, 45,  40, 41);
+
  
 dht11 DHT11;
 float temperatura = 0;
@@ -19,8 +21,14 @@ float umidade = 0;
 void setup() {
   Serial.begin(9600);
    
+   
+   
   // set up the LCD's number of rows and columns: 
   lcd.begin(16, 2);
+  lcd.setCursor(0,0);
+  lcd.print("Starting....");   
+  delay(1200);
+
   
   pinMode(REDLITE, OUTPUT);
   pinMode(GREENLITE, OUTPUT);
@@ -57,7 +65,7 @@ void getdata(int iPuerto) {
  * Display temp and hum
  */
 void displayTemperature() {
-  getdata(2);  
+  getdata(49);  
   // set up the LCD's number of rows and columns: 
 //  lcd.begin(16, 2);
 
