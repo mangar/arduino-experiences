@@ -1,0 +1,25 @@
+
+Hardware
+========
+
+- 1 Arduino UNO
+- 4 push buttons
+- 4 resistores de 2.2k Ohm
+- 1 placa PCB
+- 1 caixa de metal 
+- 1 chave liga/desliga
+
+
+Referencia
+==========
+
+Schema
+- http://arduino.cc/en/uploads/Tutorial/lcd_schem.png
+
+
+Display sem potenciometo, manipulando o sinal analogico: 
+- http://www.elecfreaks.com/381.html
+
+
+Datasheet do LCD 8x2:
+- http://www.datasheetcatalog.com/

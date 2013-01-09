@@ -38,6 +38,18 @@ To be tested
  * File server: http://www.ladyada.net/learn/arduino/ethfiles.html
 
 
+* IR Remote Control
+ * http://dx.com/p/ir-receiver-module-wireless-remote-control-kit-for-arduino-1-x-cr2025-135520
+
+
+ * Bluebooth
+  * http://dx.com/p/jy-mcu-arduino-bluetooth-wireless-serial-port-module-104299?rt=1&p=2&m=2&r=3&k=1&t=1&s=156692&u=104299
+
+
+* Motion Detection
+ * http://dx.com/p/ir-infrared-motion-detection-sensor-module-dc-5v-20v-139624
+
+
 * * * 
 
 

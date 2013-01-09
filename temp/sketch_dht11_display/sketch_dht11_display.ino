@@ -15,13 +15,21 @@ dht11 DHT11;
 float temperatura = 0;
 float umidade = 0;
 
+
+//FADE
+int FADE_LED = 9;           // the pin that the LED is attached to
+int brightness = 0;    // how bright the LED is
+int fadeAmount = 5;    // how many points to fade the LED by
+
+
 /**
  * Start the serial communication and LCD
  */
 void setup() {
   Serial.begin(9600);
    
-   
+  // FADE
+  pinMode(FADE_LED, OUTPUT);
    
   // set up the LCD's number of rows and columns: 
   lcd.begin(16, 2);
@@ -61,28 +69,67 @@ void getdata(int iPuerto) {
   }
 }
 
+
+boolean hasToDisplayTemperature() {
+  boolean has = false;
+  if (brightness == 0 || brightness == 255) {
+    has = true;
+  }
+  return has;
+}
+
 /**
  * Display temp and hum
  */
 void displayTemperature() {
-  getdata(49);  
-  // set up the LCD's number of rows and columns: 
-//  lcd.begin(16, 2);
-
-  lcd.setCursor(0,0);
-  lcd.print("Temp.:");
-  lcd.print(temperatura, 1);
-  lcd.print("o C"); 
   
-  lcd.setCursor(0,1);
-  lcd.print("Umidade:");
-  lcd.print(umidade, 1);  
-  lcd.print("%");  
+  if (hasToDisplayTemperature()) {
+    getdata(49);  
+    // set up the LCD's number of rows and columns: 
+  //  lcd.begin(16, 2);
+  
+    lcd.setCursor(0,0);
+    lcd.print("Temp.:");
+    lcd.print(temperatura, 1);
+    lcd.print("o C"); 
+    
+    lcd.setCursor(0,1);
+    lcd.print("Umidade:");
+    lcd.print(umidade, 1);  
+    lcd.print("%");  
+  }
 }
 
 
 
+void fadeLED() {
+  analogWrite(FADE_LED, brightness);    
+
+  // change the brightness for next time through the loop:
+  brightness = brightness + fadeAmount;
+
+  // reverse the direction of the fading at the ends of the fade: 
+  if (brightness == 0 || brightness == 255) {
+    fadeAmount = -fadeAmount ; 
+  }     
+  Serial.print("FADE ... ");
+  Serial.print("brightness: "); Serial.print(brightness);
+  Serial.print(" fadeAmount: "); Serial.print(fadeAmount);
+  Serial.println("");
+  
+  // wait for 30 milliseconds to see the dimming effect    
+  if (brightness > 0) {
+    delay(30);
+  } else {
+    digitalWrite(FADE_LED, LOW);
+    delay(1000);
+  }
+
+}
+
+
 void loop() {  
   displayTemperature();
-  delay(2000);
+  fadeLED();
+//  delay(2000);
 }

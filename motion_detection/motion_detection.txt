@@ -1,0 +1,19 @@
+
+
+References
+----------
+
+http://playground.arduino.cc/Code/PIRsense
+http://www.ladyada.net/learn/sensors/pir.html
+
+
+
+Ideas
+------
+Move a servo from left to the right with two sensors.
+
+
+
+Sample Code
+-----------
+http://www.ladyada.net/learn/sensors/pir.html

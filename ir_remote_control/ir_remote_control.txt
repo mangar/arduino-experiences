@@ -1,0 +1,11 @@
+
+
+Reference
+---------
+* http://www.geeetech.com/wiki/index.php/Arduino_IR_Remote_Control
+
+
+
+Ideas
+-----
+* control a servo
